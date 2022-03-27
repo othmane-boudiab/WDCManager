@@ -3,12 +3,15 @@ package com.wdcmanager.services;
 import com.wdcmanager.DAO.ExerciceDAO;
 import com.wdcmanager.entity.Exercice;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
+@Service
 public class ExerciceService implements Services<Exercice> {
 
     @Autowired
