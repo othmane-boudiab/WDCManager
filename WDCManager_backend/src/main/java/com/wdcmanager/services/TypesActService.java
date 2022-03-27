@@ -3,12 +3,15 @@ package com.wdcmanager.services;
 import com.wdcmanager.DAO.TypesActDAO;
 import com.wdcmanager.entity.TypesAct;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
+@Service
 public class TypesActService implements Services<TypesAct> {
 
     @Autowired

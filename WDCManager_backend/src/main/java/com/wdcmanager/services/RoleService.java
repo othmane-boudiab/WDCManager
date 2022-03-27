@@ -3,11 +3,14 @@ package com.wdcmanager.services;
 import com.wdcmanager.DAO.RoleDAO;
 import com.wdcmanager.entity.Role;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-@AllArgsConstructor
+@RequiredArgsConstructor
+@Service
 public class RoleService implements Services<Role> {
 
     @Autowired
