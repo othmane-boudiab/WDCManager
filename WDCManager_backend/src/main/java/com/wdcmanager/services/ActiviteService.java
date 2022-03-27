@@ -9,7 +9,7 @@ import org.springframework.dao.DataAccessException;
 import java.util.List;
 
 @AllArgsConstructor
-public class ActiviteService implements Service<Activite>{
+public class ActiviteService implements Services<Activite> {
 
     @Autowired
     private final ActiviteDAO activiteDAO;

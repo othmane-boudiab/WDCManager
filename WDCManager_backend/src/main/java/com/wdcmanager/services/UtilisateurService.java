@@ -2,16 +2,20 @@ package com.wdcmanager.services;
 
 import com.wdcmanager.DAO.UtllisateurDAO;
 import com.wdcmanager.entity.Utilisateur;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-@AllArgsConstructor
-public class UtilisateurService implements Service<Utilisateur>{
+@RequiredArgsConstructor
+@Service
+public class UtilisateurService implements Services<Utilisateur> {
 
     @Autowired
     private final UtllisateurDAO utllisateurDAO;
+
+
 
     @Override
     public List<Utilisateur> getAll() {
@@ -20,7 +24,7 @@ public class UtilisateurService implements Service<Utilisateur>{
 
     @Override
     public Utilisateur get(Long id) {
-        return utllisateurDAO.getById(id);
+        return utllisateurDAO.findById(id).get();
     }
 
     @Override

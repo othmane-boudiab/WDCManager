@@ -3,12 +3,15 @@ package com.wdcmanager.services;
 import com.wdcmanager.DAO.ResponsableDAO;
 import com.wdcmanager.entity.Responsable;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-@AllArgsConstructor
-public class ResponsableService implements Service<Responsable>{
+@RequiredArgsConstructor
+@Service
+public class ResponsableService implements Services<Responsable> {
 
     @Autowired
     private final ResponsableDAO responsableDAO;
@@ -20,7 +23,7 @@ public class ResponsableService implements Service<Responsable>{
 
     @Override
     public Responsable get(Long id) {
-        return responsableDAO.getById(id);
+        return responsableDAO.findById(id).get();
     }
 
     @Override

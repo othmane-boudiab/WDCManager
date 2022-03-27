@@ -8,7 +8,7 @@ import org.springframework.dao.DataAccessException;
 
 import java.util.List;
 @AllArgsConstructor
-public class TypeService implements Service<Type>{
+public class TypeService implements Services<Type> {
 
     @Autowired
     private final TypeDAO typeDAO;

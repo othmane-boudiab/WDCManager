@@ -8,7 +8,7 @@ import org.springframework.dao.DataAccessException;
 
 import java.util.List;
 @AllArgsConstructor
-public class RoleService implements Service<Role>{
+public class RoleService implements Services<Role> {
 
     @Autowired
     private final RoleDAO roleDAO;
