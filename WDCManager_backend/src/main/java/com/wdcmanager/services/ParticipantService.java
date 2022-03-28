@@ -32,6 +32,11 @@ public class ParticipantService implements Services<Participant> {
     }
 
     @Override
+    public Participant edit(Participant participant) {
+        return participantDAO.save(participant);
+    }
+
+    @Override
     public boolean delete(Participant participant) {
         try {
             participantDAO.delete(participant);

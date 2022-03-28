@@ -32,6 +32,11 @@ public class ActiviteService implements Services<Activite> {
     }
 
     @Override
+    public Activite edit(Activite activite) {
+        return activiteDAO.save(activite);
+    }
+
+    @Override
     public boolean delete(Activite activite) {
         try {
             activiteDAO.delete(activite);

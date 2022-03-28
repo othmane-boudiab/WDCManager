@@ -16,7 +16,6 @@ public class UtilisateurService implements Services<Utilisateur> {
     private final UtllisateurDAO utllisateurDAO;
 
 
-
     @Override
     public List<Utilisateur> getAll() {
         return utllisateurDAO.findAll();
@@ -33,6 +32,12 @@ public class UtilisateurService implements Services<Utilisateur> {
     }
 
     @Override
+    public Utilisateur edit(Utilisateur utilisateur) {
+        return utllisateurDAO.save(utilisateur);
+    }
+
+
+    @Override
     public boolean delete(Utilisateur utilisateur) {
         try {
             utllisateurDAO.delete(utilisateur);
@@ -41,5 +46,9 @@ public class UtilisateurService implements Services<Utilisateur> {
             System.out.println(exception.getMessage());
             return false;
         }
+    }
+
+    public Utilisateur login(Utilisateur utilisateur){
+        return utllisateurDAO.findByEmail(utilisateur.getEmail());
     }
 }

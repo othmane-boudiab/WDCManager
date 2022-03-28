@@ -33,6 +33,11 @@ public class TypesActService implements Services<TypesAct> {
     }
 
     @Override
+    public TypesAct edit(TypesAct typesAct) {
+        return typesActDAO.save(typesAct);
+    }
+
+    @Override
     public boolean delete(TypesAct typesAct) {
         try {
             typesActDAO.delete(typesAct);

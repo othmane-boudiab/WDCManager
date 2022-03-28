@@ -32,6 +32,11 @@ public class TypeService implements Services<Type> {
     }
 
     @Override
+    public Type edit(Type type) {
+        return typeDAO.save(type);
+    }
+
+    @Override
     public boolean delete(Type type) {
         try {
             typeDAO.delete(type);

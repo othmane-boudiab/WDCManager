@@ -32,6 +32,11 @@ public class RoleService implements Services<Role> {
     }
 
     @Override
+    public Role edit(Role role) {
+        return roleDAO.save(role);
+    }
+
+    @Override
     public boolean delete(Role role) {
         try {
             roleDAO.delete(role);

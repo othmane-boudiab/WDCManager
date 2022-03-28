@@ -24,11 +24,16 @@ public class ExerciceService implements Services<Exercice> {
 
     @Override
     public Exercice get(Long id) {
-        return exerciceDAO.getById(id);
+        return exerciceDAO.findById(id).get();
     }
 
     @Override
     public Exercice add(Exercice exercice) {
+        return exerciceDAO.save(exercice);
+    }
+
+    @Override
+    public Exercice edit(Exercice exercice) {
         return exerciceDAO.save(exercice);
     }
 

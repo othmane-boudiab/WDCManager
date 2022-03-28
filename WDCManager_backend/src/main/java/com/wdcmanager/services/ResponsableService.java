@@ -32,6 +32,11 @@ public class ResponsableService implements Services<Responsable> {
     }
 
     @Override
+    public Responsable edit(Responsable responsable) {
+        return responsableDAO.save(responsable);
+    }
+
+    @Override
     public boolean delete(Responsable responsable) {
         try {
             responsableDAO.delete(responsable);
