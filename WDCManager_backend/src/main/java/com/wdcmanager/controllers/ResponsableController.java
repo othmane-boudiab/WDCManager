@@ -26,9 +26,14 @@ public class ResponsableController {
         return responsableService.get(id);
     }
 
-    @PostMapping("/save")
-    public Responsable save(@RequestBody Responsable responsable){
+    @PostMapping("/add")
+    public Responsable add(@RequestBody Responsable responsable){
         return responsableService.add(responsable);
+    }
+
+    @PutMapping("/edit/{id}")
+    public Responsable edit(@RequestBody Responsable responsable,@PathVariable("id") Long id){
+        return responsableService.edit(responsable);
     }
 
     @DeleteMapping("/delete/{id}")

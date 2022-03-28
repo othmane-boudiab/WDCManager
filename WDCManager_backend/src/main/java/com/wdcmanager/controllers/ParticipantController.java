@@ -26,9 +26,14 @@ public class ParticipantController {
         return participantService.get(id);
     }
 
-    @PostMapping("/save")
-    public Participant save(@RequestBody Participant participant){
+    @PostMapping("/add")
+    public Participant add(@RequestBody Participant participant){
         return participantService.add(participant);
+    }
+
+    @PutMapping("/edit/{id}")
+    public Participant edit(@RequestBody Participant participant,@PathVariable("id") Long id){
+        return participantService.edit(participant);
     }
 
     @DeleteMapping("/delete/{id}")
