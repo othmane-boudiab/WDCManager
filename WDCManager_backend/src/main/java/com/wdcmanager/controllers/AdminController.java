@@ -40,4 +40,10 @@ public class AdminController {
     public boolean delete(@RequestBody Utilisateur utilisateur){
         return utilisateurService.delete(utilisateur);
     }
+
+    // login
+    @PostMapping("/login")
+    public Utilisateur login(@RequestBody Utilisateur utilisateur){
+        return utilisateurService.login(utilisateur);
+    }
 }

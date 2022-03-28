@@ -1,4 +1,4 @@
-package com.wdcmanager.DAO;
+package com.wdcmanager.repository;
 
 import com.wdcmanager.entity.Type;
 import org.springframework.data.jpa.repository.JpaRepository;

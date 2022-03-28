@@ -1,6 +1,6 @@
 package com.wdcmanager.services;
 
-import com.wdcmanager.DAO.UtllisateurDAO;
+import com.wdcmanager.repository.UtllisateurDAO;
 import com.wdcmanager.entity.Utilisateur;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

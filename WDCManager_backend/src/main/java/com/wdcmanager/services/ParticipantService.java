@@ -1,8 +1,7 @@
 package com.wdcmanager.services;
 
-import com.wdcmanager.DAO.ParticipantDAO;
+import com.wdcmanager.repository.ParticipantDAO;
 import com.wdcmanager.entity.Participant;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;

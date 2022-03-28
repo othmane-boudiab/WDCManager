@@ -1,6 +1,6 @@
 package com.wdcmanager.services;
 
-import com.wdcmanager.DAO.ActiviteDAO;
+import com.wdcmanager.repository.ActiviteDAO;
 import com.wdcmanager.entity.Activite;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
