@@ -45,8 +45,8 @@ public class Activite {
     @JoinColumn(name = "responsable_id")
     private Responsable responsable;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "exercice_id")
-    private Exercice exerciceId;
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "exercice_id")
+//    private Exercice exerciceId;
 
 }

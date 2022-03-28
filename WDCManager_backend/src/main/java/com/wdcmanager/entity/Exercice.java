@@ -41,7 +41,8 @@ public class Exercice {
     @Column(name = "end_date")
     private LocalDate endDate;
 
-    @OneToOne()
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "activite_id")
     private Activite activiteId;
 
 }
