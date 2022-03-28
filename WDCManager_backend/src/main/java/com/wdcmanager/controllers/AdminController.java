@@ -26,9 +26,14 @@ public class AdminController {
         return utilisateurService.get(id);
     }
 
-    @PostMapping("/save")
-    public Utilisateur save(@RequestBody Utilisateur utilisateur){
+    @PostMapping("/add")
+    public Utilisateur add(@RequestBody Utilisateur utilisateur){
         return utilisateurService.add(utilisateur);
+    }
+
+    @PutMapping("/edit/{id}")
+    public Utilisateur edit(@RequestBody Utilisateur utilisateur,@PathVariable("id") Long id){
+        return utilisateurService.edit(utilisateur);
     }
 
     @DeleteMapping("/delet/{id}")
