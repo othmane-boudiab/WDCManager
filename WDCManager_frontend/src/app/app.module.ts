@@ -9,6 +9,7 @@ import { UtilisateursComponent } from './pages/utilisateurs/utilisateurs.compone
 import { ActivitiesComponent } from './pages/activities/activities.component';
 import { ExercisesComponent } from './pages/exercises/exercises.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SettingsComponent } from './pages/settings/settings.component';
     UtilisateursComponent,
     ActivitiesComponent,
     ExercisesComponent,
-    SettingsComponent
+    SettingsComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
