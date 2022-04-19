@@ -5,7 +5,7 @@ import com.wdcmanager.entity.Utilisateur;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
-import org.springframework.security.crypto.password.PasswordEncoder;
+//import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,7 +16,7 @@ public class UtilisateurService implements Services<Utilisateur> {
     @Autowired
     private final UtllisateurDAO utllisateurDAO;
 
-    private final PasswordEncoder passwordEncoder;
+//    private final PasswordEncoder passwordEncoder;
 
 
     @Override
@@ -31,13 +31,13 @@ public class UtilisateurService implements Services<Utilisateur> {
 
     @Override
     public Utilisateur add(Utilisateur utilisateur) {
-        utilisateur.setPassword(passwordEncoder.encode(utilisateur.getPassword()));
+//        utilisateur.setPassword(passwordEncoder.encode(utilisateur.getPassword()));
         return utllisateurDAO.save(utilisateur);
     }
 
     @Override
     public Utilisateur edit(Utilisateur utilisateur) {
-        utilisateur.setPassword(passwordEncoder.encode(utilisateur.getPassword()));
+//        utilisateur.setPassword(passwordEncoder.encode(utilisateur.getPassword()));
         return utllisateurDAO.save(utilisateur);
     }
 

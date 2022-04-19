@@ -1,4 +1,4 @@
-package com.wdcmanager.security;
-
-public class UserDetailsImpl {
-}
+//package com.wdcmanager.security;
+//
+//public class UserDetailsImpl {
+//}
