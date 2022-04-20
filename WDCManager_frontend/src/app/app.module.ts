@@ -10,6 +10,8 @@ import { ActivitiesComponent } from './pages/activities/activities.component';
 import { ExercisesComponent } from './pages/exercises/exercises.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
     ActivitiesComponent,
     ExercisesComponent,
     SettingsComponent,
-    SideBarComponent
+    SideBarComponent,
+    NavBarComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
