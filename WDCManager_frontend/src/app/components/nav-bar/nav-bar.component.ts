@@ -1,3 +1,4 @@
+import { Routes } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
